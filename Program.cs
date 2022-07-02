@@ -30,3 +30,16 @@ string[] GetNewArray(int length)
     }
     return result;
 }
+
+int FindSizeArray(string[] arrayFromFind, int textSize = 3)
+{
+    int count = 0;
+    foreach (var textElement in arrayFromFind)
+    {
+        if (textElement.Length <= textSize)
+        {
+            count++;
+        }
+    }
+    return count;
+}
