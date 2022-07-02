@@ -59,3 +59,8 @@ string[] FillResultArray(string[] arrayFromFill, int textSize = 3)
     }
     return result;
 }
+
+string PrintArray(string[] arrayForPrint)
+{
+    return string.Join(", ", arrayForPrint);
+}
