@@ -43,3 +43,19 @@ int FindSizeArray(string[] arrayFromFind, int textSize = 3)
     }
     return count;
 }
+
+string[] FillResultArray(string[] arrayFromFill, int textSize = 3)
+{
+    int length = FindSizeArray(arrayFromFill);
+    string[] result = new string[length];
+    int index = 0;
+    foreach (var textElement in arrayFromFill)
+    {
+        if (textElement.Length <= textSize)
+        {
+            result[index] = textElement;
+            index++;
+        }
+    }
+    return result;
+}
