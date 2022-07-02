@@ -13,3 +13,20 @@
 ["Russia", "Denmark", "Kazan"] -> []
 */
 
+string[] GetNewArray(int length)
+{
+    string[] result = new string[length];
+    Console.WriteLine($"\nСоздан массив с колличеством элементов: {length}\n"
+                      +"\nЗаполните массив:");
+    for (int i = 0; i < result.Length; i++)
+    {
+        Console.Write($"[{i}] <- ");
+        string element = Console.ReadLine()!;
+        if (string.IsNullOrEmpty(element))
+        {
+            element = "empty";
+        }
+        result[i] = element;
+    }
+    return result;
+}
