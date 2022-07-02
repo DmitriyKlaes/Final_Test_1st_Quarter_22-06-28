@@ -64,3 +64,8 @@ string PrintArray(string[] arrayForPrint)
 {
     return string.Join(", ", arrayForPrint);
 }
+
+int length = 5;
+string[] originalArray = GetNewArray(length);
+string[] resultArray = FillResultArray(originalArray);
+Console.WriteLine($"\n[{PrintArray(originalArray)}] -> [{PrintArray(resultArray)}]");
